@@ -2,7 +2,7 @@ class ServerStatusesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
 
   def index
-    @server_statuses = ServerStatus.all
+    @server_statuses = ServerStatus.all.reverse.take(5)
   end
 
   def new
