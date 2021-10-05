@@ -1,0 +1,5 @@
+<%= simple_form_for @server_status do |f| %>
+  <%= f.input :status, as: :radio_buttons, collection: ServerStatus::ALLOWED_STATUSES %>
+  <%= f.input :message %>
+  <%= f.button :submit %>
+<% end %>

@@ -5,6 +5,10 @@ class ServerStatusesController < ApplicationController
     @server_statuses = ServerStatus.all
   end
 
+  def new
+    @server_status = ServerStatus.new
+  end
+
   def create
     @server_status = ServerStatus.create(server_status_params)
     if @server_status.save
