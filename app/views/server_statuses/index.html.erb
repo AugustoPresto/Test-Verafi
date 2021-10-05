@@ -4,7 +4,7 @@
       <div class="d-flex justify-content-center">
         <div class="container">
           <h3 class="pt-2 text-status"><b><%= server_status.message %> - <%= server_status.status %></b></h3>
-          <h4 class="text-muted text-timestamp">Updated at <%= server_status.created_at.strftime("%k:%M:%S %e %B %Y") %></h4>
+          <h4 class="text-muted text-timestamp">Updated at <%= server_status.updated_at.strftime("%k:%M:%S %e %B %Y") %></h4>
         </div>
         <div class="d-flex align-items-center">
           <% if user_signed_in? %>
