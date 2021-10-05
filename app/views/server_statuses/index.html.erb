@@ -1,0 +1,8 @@
+<% @server_statuses.each do |server_status| %>
+  <%= server_status.message %> - <%= server_status.status %>
+  <%= server_status.created_at.strftime("%k:%M:%S %e %B %Y") %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to "Update server status", serverstatuses_path, class: "fas fa-edit" %>
+<% end %>
