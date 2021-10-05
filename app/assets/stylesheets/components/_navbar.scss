@@ -1,12 +1,13 @@
-.navbar-lewagon {
+.navbar-verafi {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-verafi .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-verafi .navbar-brand img {
+  width: 100px;
+  filter: invert(100%);
 }
