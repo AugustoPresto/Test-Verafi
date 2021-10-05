@@ -17,6 +17,6 @@ class ServerStatusesController < ApplicationController
   private
 
   def server_status_params
-    params.require(:article).permit(:status, :message)
+    params.require(:server_status).permit(:status, :message)
   end
 end
