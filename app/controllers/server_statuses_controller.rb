@@ -1,8 +1,8 @@
 class ServerStatusesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :show ]
+  skip_before_action :authenticate_user!, only: [ :index ]
 
-  def show
-
+  def index
+    @server_statuses = ServerStatus.all
   end
 
   def create
