@@ -3,7 +3,11 @@
     <% @server_statuses.each do |server_status| %>
       <div class="d-flex justify-content-center">
         <div class="container">
-          <h3 class="pt-2 text-status"><b><%= server_status.message %> - <%= server_status.status %></b></h3>
+          <h3 class="pt-2 text-status"><b><%= server_status.message %> <% if server_status.status == "UP" %>
+                                                                         <i class="far fa-thumbs-up text-success"></i>
+                                                                       <% else %>
+                                                                         <i class="far fa-thumbs-down text-danger"></i>
+                                                                       <% end %></b></h3>
           <h4 class="text-muted text-timestamp">Updated at <%= server_status.updated_at.strftime("%k:%M:%S %e %B %Y") %></h4>
         </div>
         <div class="d-flex align-items-center">

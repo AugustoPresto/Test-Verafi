@@ -2,6 +2,6 @@
   <div class="items-center shadow p-3 mb-3 bg-white rounded">
     <%= f.input :status, as: :radio_buttons, collection: ServerStatus::ALLOWED_STATUSES %>
     <%= f.input :message %>
-    <%= f.button :submit, class: "items-center btn btn-info btn-sm" %>
+    <%= f.button :submit, "Update server status", class: "items-center btn btn-info btn-sm" %>
   </div>
 <% end %>
