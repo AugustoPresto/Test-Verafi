@@ -7,7 +7,7 @@ class ServerStatusesController < ApplicationController
   end
 
   def new
-    @server_status = ServerStatus.new
+    @server_status = ServerStatus.new(status: ServerStatus.last.status, message: ServerStatus.last.message)
   end
 
   def create
