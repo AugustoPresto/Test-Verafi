@@ -1,5 +1,9 @@
 <div class="container items-center">
   <div class="shadow p-3 mb-3 bg-white rounded">
+    <div class="d-flex text-center flex-column">
+      <h2>The server is: <b><%= @server_statuses.first.status %></b></h2>
+      <h2><%= @server_statuses.first.message %></h2>
+    </div>
     <% @server_statuses.each do |server_status| %>
       <div class="d-flex justify-content-center">
         <div class="container">
