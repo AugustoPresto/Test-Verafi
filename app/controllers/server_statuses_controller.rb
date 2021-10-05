@@ -6,7 +6,12 @@ class ServerStatusesController < ApplicationController
   end
 
   def create
-    
+    @server_status = ServerStatus.create(server_status_params)
+    if @server_status.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
