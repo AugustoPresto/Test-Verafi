@@ -1,5 +1,6 @@
 class ServerStatusesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
+  before_action :set_server_status, only: [ :edit, :update ]
 
   def index
     @server_statuses = ServerStatus.all.reverse.take(5)
@@ -27,6 +28,10 @@ class ServerStatusesController < ApplicationController
   end
 
   private
+
+  def set_server_status
+    @server_status = ServerStatus.find(params[:id])
+  end
 
   def server_status_params
     params.require(:server_status).permit(:status, :message)
