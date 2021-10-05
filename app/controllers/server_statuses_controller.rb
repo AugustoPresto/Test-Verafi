@@ -18,6 +18,14 @@ class ServerStatusesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @server_status.update(server_status_params)
+    redirect_to root_path
+  end
+
   private
 
   def server_status_params
